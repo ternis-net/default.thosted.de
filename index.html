@@ -18,8 +18,16 @@
     </div>
     <div class="controls">
       <div class="lang-switch" role="group" aria-label="Language Selector">
-        <button type="button" class="lang-btn active" data-lang="de">DE</button>
-        <button type="button" class="lang-btn" data-lang="en">EN</button>
+        <span class="lang-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+          </svg>
+        </span>
+        <button type="button" class="lang-btn active" data-lang="de" aria-pressed="true">DE</button>
+        <span class="lang-divider"></span>
+        <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
       </div>
       <button type="button" id="themeToggle" class="theme-toggle" aria-label="Toggle Theme" title="Toggle Light/Dark Theme">
         <svg class="sun-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -42,10 +50,15 @@
 
   <main class="container">
     <div class="hero">
-      <div class="status-pill">
+      <a id="statusLink" href="https://tstatus.de" target="_blank" rel="noopener noreferrer" class="status-pill" title="System Status: tstatus.de">
         <span class="status-dot"></span>
         <span data-i18n="status_active">Domain aktiv geschaltet</span>
-      </div>
+        <svg class="status-arrow" viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+          <polyline points="15 3 21 3 21 9"></polyline>
+          <line x1="10" y1="14" x2="21" y2="3"></line>
+        </svg>
+      </a>
       <h1 id="domainName" class="domain-title">ihre-domain.de</h1>
       <p class="hero-desc" data-i18n="hero_description">
         Diese Domain wurde erfolgreich registriert und ist auf der <strong>thosted.de</strong> Infrastruktur eingerichtet. Hier entsteht in Kürze eine neue Webpräsenz.
@@ -135,6 +148,7 @@
           <a href="https://ternis.net" target="_blank" rel="noopener noreferrer" class="tag-link">ternis.net</a>
           <a href="https://ternis-edv.de" target="_blank" rel="noopener noreferrer" class="tag-link">ternis-edv.de</a>
           <a href="https://ternis.dev" target="_blank" rel="noopener noreferrer" class="tag-link">ternis.dev</a>
+          <a href="https://ternis.org" target="_blank" rel="noopener noreferrer" class="tag-link">ternis.org</a>
         </div>
       </section>
     </div>

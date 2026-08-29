@@ -31,14 +31,18 @@
     }
   };
 
-  // 1. Resolve domain name
+  // 1. Resolve domain name & status link
   const domainEl = document.getElementById("domainName");
+  const statusLink = document.getElementById("statusLink");
   let hostname = window.location.hostname;
   if (!hostname || hostname === "localhost" || hostname === "127.0.0.1" || hostname === "") {
     hostname = "ihre-domain.de";
   }
   if (domainEl) {
     domainEl.textContent = hostname;
+  }
+  if (statusLink) {
+    statusLink.href = `https://tstatus.de?from=${encodeURIComponent(hostname)}`;
   }
 
   // 2. Set current year
@@ -85,7 +89,9 @@
     }
 
     langButtons.forEach((btn) => {
-      btn.classList.toggle("active", btn.dataset.lang === lang);
+      const isActive = btn.dataset.lang === lang;
+      btn.classList.toggle("active", isActive);
+      btn.setAttribute("aria-pressed", isActive ? "true" : "false");
     });
   }
 

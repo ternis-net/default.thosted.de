@@ -97,21 +97,51 @@ body {
 }
 
 .lang-switch {
-  display: flex;
+  display: inline-flex;
+  align-items: center;
   background: var(--card-bg);
   border: 1px solid var(--card-border);
-  border-radius: 4px;
+  border-radius: 6px;
+  padding: 2px;
+  gap: 2px;
+}
+
+.lang-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0.35rem 0 0.45rem;
+  color: var(--text-muted);
+}
+
+.lang-divider {
+  width: 1px;
+  height: 14px;
+  background-color: var(--card-border);
 }
 
 .lang-btn {
   background: none;
   border: none;
   color: var(--text-muted);
-  font-size: 0.8rem;
-  font-weight: 600;
-  padding: 0.35rem 0.65rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
   cursor: pointer;
+  outline: none;
   transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.lang-btn:hover:not(.active) {
+  color: var(--text-main);
+  background-color: var(--code-bg);
+}
+
+.lang-btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
 }
 
 .lang-btn.active {
@@ -123,19 +153,25 @@ body {
   background: var(--card-bg);
   border: 1px solid var(--card-border);
   color: var(--text-muted);
-  width: 34px;
-  height: 34px;
-  border-radius: 4px;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: border-color 0.15s ease, color 0.15s ease;
+  transition: border-color 0.15s ease, color 0.15s ease, background-color 0.15s ease;
 }
 
 .theme-toggle:hover {
   color: var(--text-main);
   border-color: var(--card-hover-border);
+  background: var(--code-bg);
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
 }
 
 [data-theme="dark"] .theme-toggle .sun-icon {
@@ -181,10 +217,32 @@ body {
   padding: 0.35rem 0.85rem;
   background: var(--status-bg);
   border: 1px solid var(--status-border);
-  border-radius: 4px;
+  border-radius: 6px;
   font-size: 0.825rem;
   font-weight: 600;
   color: var(--status-text);
+  text-decoration: none;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.status-pill:hover {
+  border-color: var(--status-text);
+  background: rgba(16, 185, 129, 0.2);
+}
+
+.status-pill:focus-visible {
+  outline: 2px solid var(--status-text);
+  outline-offset: 2px;
+}
+
+.status-arrow {
+  opacity: 0.75;
+  transition: opacity 0.15s ease;
+}
+
+.status-pill:hover .status-arrow {
+  opacity: 1;
 }
 
 .status-dot {
