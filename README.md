@@ -11,7 +11,7 @@ Default placeholder / parked domain landing page for domains hosted on the **tho
 - **Nameserver & DNS Info**: Highlights primary nameservers (`one.ns.ternis.net`, `two.ns.ternis.net`) with one-click copy to clipboard.
 - **Domain Management Links**: Direct access to management portals (`ternisdomains.de`, `dnbx.de`).
 - **Hosting & Infrastructure Links**: Direct links to `thosted.de`, `ternis.net`, `ternis-edv.de`, `ternis.dev`.
-- **Dynamic Legal / Privacy Policy**: Automatically routes to `https://ternis.dev/de/legal/privacy` or `https://ternis.dev/en/legal/privacy` depending on selected language.
+- **Dynamic Legal / Imprint & Privacy Policy**: Automatically routes to `https://ternis.dev/{de|en}/legal/imprint` and `https://ternis.dev/{de|en}/legal/privacy` based on the selected language.
 
 ## Project Structure
 

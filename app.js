@@ -12,7 +12,7 @@
       infra_title: "Hosting & Infrastruktur",
       infra_desc: "Bereitgestellt durch die Ternis Hosting & Cloud Services:",
       privacy_policy: "Datenschutz",
-      legal_info: "Impressum & Rechtliches",
+      legal_imprint: "Impressum",
       meta_title: "Domain geparkt | thosted.de"
     },
     en: {
@@ -26,7 +26,7 @@
       infra_title: "Hosting & Infrastructure",
       infra_desc: "Powered by Ternis Hosting & Cloud Services:",
       privacy_policy: "Privacy Policy",
-      legal_info: "Legal Notice",
+      legal_imprint: "Imprint",
       meta_title: "Domain Parked | thosted.de"
     }
   };
@@ -81,7 +81,7 @@
       privacyLink.href = `https://ternis.dev/${lang}/legal/privacy`;
     }
     if (imprintLink) {
-      imprintLink.href = `https://ternis.dev/${lang}/legal/privacy`;
+      imprintLink.href = `https://ternis.dev/${lang}/legal/imprint`;
     }
 
     langButtons.forEach((btn) => {
