@@ -278,6 +278,89 @@ body {
   font-weight: 600;
 }
 
+/* Why Section Box */
+.why-box {
+  width: 100%;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  padding: 1.75rem;
+  text-align: left;
+  transition: border-color 0.15s ease;
+}
+
+.why-box:hover {
+  border-color: var(--card-hover-border);
+}
+
+.why-header {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.35rem;
+}
+
+.why-icon {
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.why-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--text-main);
+}
+
+.why-subtitle {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.why-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.why-list li {
+  position: relative;
+  padding-left: 1.35rem;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+.why-list li::before {
+  content: "";
+  position: absolute;
+  left: 0.15rem;
+  top: 0.55rem;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--accent);
+}
+
+.why-list li strong {
+  color: var(--text-main);
+  font-weight: 600;
+}
+
+.status-tag {
+  display: inline-block;
+  padding: 0.1rem 0.45rem;
+  font-size: 0.775rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  border-radius: 4px;
+  background: var(--code-bg);
+  border: 1px solid var(--code-border);
+  color: var(--text-main);
+  white-space: nowrap;
+}
+
 /* Flat Cards Grid */
 .cards-grid {
   display: grid;
@@ -491,6 +574,9 @@ body {
   .container {
     padding: 2rem 1rem 3rem;
     gap: 2.5rem;
+  }
+  .why-box {
+    padding: 1.25rem 1rem;
   }
   .footer-container {
     flex-direction: column;
