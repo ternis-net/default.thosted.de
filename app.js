@@ -3,7 +3,7 @@
   const i18n = {
     de: {
       status_active: "Domain aktiv geschaltet",
-      hero_description: "Diese Domain wurde erfolgreich registriert und ist auf der <strong>thosted.de</strong> Infrastruktur eingerichtet. Hier entsteht in Kürze eine neue Webpräsenz.",
+      hero_description: "Diese Domain wurde erfolgreich registriert und ist auf der <strong>thosted.de</strong>(ternis-edv) Infrastruktur eingerichtet. Hier entsteht in Kürze eine neue Webpräsenz.",
       dns_title: "DNS & Nameserver",
       dns_desc: "Zuständige primäre Nameserver für dieses System:",
       copied_text: "Kopiert!",
@@ -17,7 +17,7 @@
     },
     en: {
       status_active: "Domain active",
-      hero_description: "This domain has been successfully registered and configured on the <strong>thosted.de</strong> infrastructure. A new website is coming soon.",
+      hero_description: "This domain has been successfully registered and configured on the <strong>thosted.de</strong>(ternis-edv) infrastructure. A new website is coming soon.",
       dns_title: "DNS & Nameservers",
       dns_desc: "Primary authoritative nameservers for this system:",
       copied_text: "Copied!",
@@ -36,7 +36,8 @@
   const statusLink = document.getElementById("statusLink");
   let hostname = window.location.hostname;
   if (!hostname || hostname === "localhost" || hostname === "127.0.0.1" || hostname === "") {
-    hostname = "ihre-domain.de";
+    // hostname = "ihre-domain.de";
+    hostname = "default.thosted.de";
   }
   if (domainEl) {
     domainEl.textContent = hostname;
