@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>DNS Node | ternis.net</title>
+  <meta name="description" content="Authoritative DNS node on ternis.net infrastructure." />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>" />
+</head>
+<body>
+  <header class="header">
+    <div class="brand">
+      <span class="brand-badge">ternis.net</span>
+      <span class="brand-sub">ns-cluster</span>
+    </div>
+    <div class="controls">
+      <div class="lang-switch" role="group" aria-label="Language Selector">
+        <button type="button" class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
+        <span class="lang-divider"></span>
+        <button type="button" class="lang-btn" data-lang="de" aria-pressed="false">DE</button>
+      </div>
+      <button type="button" id="themeToggle" class="theme-toggle" aria-label="Toggle Theme" title="Toggle Light/Dark Theme">
+        <svg class="sun-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <svg class="moon-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Hero / Node Info -->
+    <div class="hero">
+      <div class="hero-top">
+        <a id="statusLink" href="https://tstatus.de" target="_blank" rel="noopener noreferrer" class="status-pill" title="Health status: tstatus.de">
+          <span class="status-dot"></span>
+          <span data-i18n="status_text">NODE OPERATIONAL</span>
+        </a>
+        <span class="proto-tag">DNS :53 UDP/TCP</span>
+      </div>
+      <h1 id="domainName" class="node-title">one.ns.ternis.net</h1>
+      <p class="node-desc" data-i18n="node_desc">Authoritative nameserver node in the ternis.net anycast / unicast DNS cluster.</p>
+    </div>
+
+    <!-- Quick Tech Grid -->
+    <div class="grid">
+      <!-- Cluster Nodes -->
+      <section class="box">
+        <div class="box-header">
+          <span class="box-title" data-i18n="cluster_title">Authoritative Cluster</span>
+          <span class="box-badge">3 Nodes</span>
+        </div>
+        <div class="ns-list">
+          <div class="ns-item" data-host="one.ns.ternis.net">
+            <div class="ns-info">
+              <span class="ns-num">01</span>
+              <code>one.ns.ternis.net</code>
+            </div>
+            <button type="button" class="copy-btn" data-copy="one.ns.ternis.net" title="Copy hostname" aria-label="Copy one.ns.ternis.net">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              <span class="copy-tooltip" data-i18n="copied">Copied</span>
+            </button>
+          </div>
+
+          <div class="ns-item" data-host="two.ns.ternis.net">
+            <div class="ns-info">
+              <span class="ns-num">02</span>
+              <code>two.ns.ternis.net</code>
+            </div>
+            <button type="button" class="copy-btn" data-copy="two.ns.ternis.net" title="Copy hostname" aria-label="Copy two.ns.ternis.net">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              <span class="copy-tooltip" data-i18n="copied">Copied</span>
+            </button>
+          </div>
+
+          <div class="ns-item" data-host="three.ns.ternis.net">
+            <div class="ns-info">
+              <span class="ns-num">03</span>
+              <code>three.ns.ternis.net</code>
+            </div>
+            <button type="button" class="copy-btn" data-copy="three.ns.ternis.net" title="Copy hostname" aria-label="Copy three.ns.ternis.net">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              <span class="copy-tooltip" data-i18n="copied">Copied</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Admin & Endpoints -->
+      <section class="box">
+        <div class="box-header">
+          <span class="box-title" data-i18n="admin_title">Management & Endpoints</span>
+          <span class="box-badge admin-badge-tag">Auth</span>
+        </div>
+        <div class="endpoint-list">
+          <a href="https://ns-admin.ternis.net" target="_blank" rel="noopener noreferrer" class="endpoint-link admin-highlight">
+            <div class="endpoint-left">
+              <div class="endpoint-main">
+                <code>ns-admin.ternis.net</code>
+                <span class="badge-role" data-i18n="role_staff">Staff / Admin</span>
+              </div>
+              <span class="endpoint-sub" data-i18n="admin_sub">DNS Zone & Nameserver Administration</span>
+            </div>
+            <svg class="ext-icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+          </a>
+
+          <a href="https://ternisdomains.de" target="_blank" rel="noopener noreferrer" class="endpoint-link">
+            <div class="endpoint-left">
+              <div class="endpoint-main">
+                <code>ternisdomains.de</code>
+              </div>
+              <span class="endpoint-sub" data-i18n="ternisdomains_sub">Domain Registration & Zone Portal</span>
+            </div>
+            <svg class="ext-icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+          </a>
+
+          <a href="https://tstatus.de" target="_blank" rel="noopener noreferrer" class="endpoint-link">
+            <div class="endpoint-left">
+              <div class="endpoint-main">
+                <code>tstatus.de</code>
+              </div>
+              <span class="endpoint-sub" data-i18n="status_sub">Network & Service Health Dashboard</span>
+            </div>
+            <svg class="ext-icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+          </a>
+        </div>
+      </section>
+    </div>
+
+    <!-- Terminal Quick Dig -->
+    <div class="terminal-box">
+      <div class="terminal-bar">
+        <div class="term-dots">
+          <span></span><span></span><span></span>
+        </div>
+        <span class="term-title">query test</span>
+      </div>
+      <div class="term-body">
+        <span class="term-prompt">$</span>
+        <code id="digCommand">dig @one.ns.ternis.net ternis.net SOA +short</code>
+        <button type="button" class="copy-btn copy-term" id="copyDigBtn" data-copy="dig @one.ns.ternis.net ternis.net SOA +short" title="Copy command">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+          <span class="copy-tooltip" data-i18n="copied">Copied</span>
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-meta">
+        <code>ternis.net</code> &bull; <code>thosted.de</code> &bull; <span id="currentYear"></span>
+      </div>
+      <nav class="footer-links" aria-label="Legal links">
+        <a id="imprintLink" href="https://ternis.dev/en/legal/imprint" target="_blank" rel="noopener noreferrer" data-i18n="imprint">Imprint</a>
+        <span class="sep">&bull;</span>
+        <a id="privacyLink" href="https://ternis.dev/en/legal/privacy" target="_blank" rel="noopener noreferrer" data-i18n="privacy">Privacy</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

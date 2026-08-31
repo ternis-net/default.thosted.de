@@ -43,6 +43,13 @@
     }
   };
 
+  // Check if current hostname is a nameserver domain and route to nameserver page if on default root
+  const isNameserverHost = /^(?:(?:one|two|three|ns\d*)\.ns\.ternis\.net|ns\.ternis\.net)$/i.test(window.location.hostname);
+  if (isNameserverHost && !window.location.pathname.startsWith("/nameserver")) {
+    window.location.replace("/nameserver/" + window.location.search + window.location.hash);
+    return;
+  }
+
   // 1. Resolve domain name & status link
   const domainEl = document.getElementById("domainName");
   const statusLink = document.getElementById("statusLink");
